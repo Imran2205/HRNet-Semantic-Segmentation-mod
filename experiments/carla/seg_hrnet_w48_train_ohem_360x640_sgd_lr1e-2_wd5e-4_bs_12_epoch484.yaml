@@ -10,9 +10,9 @@ PRINT_FREQ: 100
 
 DATASET:
   DATASET: carla
-  ROOT: 'data/'
-  TEST_SET: 'list/carla/val.lst'
-  TRAIN_SET: 'list/carla/train.lst'
+  ROOT: '/kaggle/input/carla-semantic/carla_semantic/carla_semantic'
+  TEST_SET: '/kaggle/input/carla-semantic/validation.lst'
+  TRAIN_SET: '/kaggle/input/carla-semantic/train.lst'
   NUM_CLASSES: 11
 MODEL:
   NAME: seg_hrnet
