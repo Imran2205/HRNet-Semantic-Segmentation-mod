@@ -13,7 +13,7 @@ DATASET:
   ROOT: 'data/'
   TEST_SET: 'list/carla/val.lst'
   TRAIN_SET: 'list/carla/train.lst'
-  NUCLASSES: 23
+  NUM_CLASSES: 11
 MODEL:
   NAME: seg_hrnet
   ALIGN_CORNERS: False
