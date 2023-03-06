@@ -14,3 +14,4 @@ from .pascal_ctx import PASCALContext as pascal_ctx
 from .ade20k import ADE20K as ade20k
 from .cocostuff import COCOStuff as cocostuff
 from .pfb import PFB as pfb
+from .carla import Carla as carla
