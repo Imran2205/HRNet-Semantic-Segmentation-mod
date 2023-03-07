@@ -111,6 +111,7 @@ class Carla(BaseDataset):
         size = image.shape
 
         if 'test' in self.list_path:
+            print(">>>>>>>>>>>>>>>>>>>>>> Test Loader <<<<<<<<<<<<<<<<<<<<<<<")
             image = self.input_transform(image)
             image = image.transpose((2, 0, 1))
 
