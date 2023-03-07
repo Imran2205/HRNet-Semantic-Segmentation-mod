@@ -10,8 +10,8 @@ PRINT_FREQ: 100
 
 DATASET:
   DATASET: carla
-  ROOT: '/kaggle/input/carla-semantic/carla_semantic/carla_semantic'
-  TEST_SET: '/kaggle/input/carla-semantic/validation.lst'
+  ROOT: '/kaggle/input/carla-test-rgb/rgb_folder_wise/rgb_folder_wise'
+  TEST_SET: '/kaggle/input/carla-test-rgb/carla_test_12k.txt'
   TRAIN_SET: '/kaggle/input/carla-semantic/train.lst'
   NUM_CLASSES: 21
 MODEL:
@@ -100,3 +100,4 @@ TEST:
   BATCH_SIZE_PER_GPU: 8
   FLIP_TEST: false
   MULTI_SCALE: false
+  MODEL_FILE: '/kaggle/input/carla-best-model/best_carla.pth'
