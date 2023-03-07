@@ -204,8 +204,8 @@ class Carla(BaseDataset):
         preds = np.asarray(np.argmax(preds.cpu(), axis=1), dtype=np.uint8)
         for i in range(preds.shape[0]):
             pred = self.convert_label(preds[i], inverse=True)
-            save_img = Image.fromarray(pred)
-            save_img.putpalette(palette)
+            save_img = Image.fromarray(pred, mode='L')
+            # save_img.putpalette(palette)
             save_img.save(os.path.join(sv_path, name[i] + '.png'))
 
 
