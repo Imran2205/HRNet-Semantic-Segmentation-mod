@@ -141,8 +141,10 @@ class PFB(BaseDataset):
         name = item["name"]
         # image = cv2.imread(os.path.join(self.root,'cityscapes',item["img"]),
         #                    cv2.IMREAD_COLOR)
-        image = cv2.imread(os.path.join(self.root, item["img"]),
-                           cv2.IMREAD_COLOR)
+        # image = cv2.imread(os.path.join(self.root, item["img"]),
+        #                    cv2.IMREAD_COLOR)
+        image = Image.open(os.path.join(self.root, item["img"])).convert('RGB')
+        image = np.array(image)
         size = image.shape
 
         if 'test' in self.list_path:
@@ -153,8 +155,10 @@ class PFB(BaseDataset):
 
         # label = cv2.imread(os.path.join(self.root,'cityscapes',item["label"]),
         #                    cv2.IMREAD_GRAYSCALE)
-        label = cv2.imread(os.path.join(self.root, item["label"]),
-                           cv2.IMREAD_GRAYSCALE)
+        # labelel = cv2.imread(os.path.join(self.root, item["label"]),
+        #                    cv2.IMREAD_GRAYSCALE)
+        label = Image.open(os.path.join(self.root, item["label"])).convert('RGB')
+        label = np.array(label)
         label = self.convert_label(label)
 
         image, label = self.gen_sample(image, label,
