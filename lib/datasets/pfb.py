@@ -129,7 +129,7 @@ class PFB(BaseDataset):
         if inverse:
             label_image_gray = label.copy()
         else:
-            label_image_gray = np.zeros(label.shape[:2])
+            label_image_gray = np.ones(label.shape[:2]) * 255
             for key in self.label_mapping.keys():
                 indices = np.argwhere(np.all(label == self.label_mapping[key]['color'], axis=-1))
                 rr, cc = indices[:, 0], indices[:, 1]

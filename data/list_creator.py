@@ -24,7 +24,7 @@ def create_list(state):
             f'{_img.replace(dataset_root, "")}\t{_img.replace("images", "labels").replace(dataset_root, "")}'
         )
 
-    with open(f'/Users/imrankabir/Desktop/research/semantic_seg_audio_description/HRNet-Semantic-Segmentation-mod/data/list/carla/{state}.lst', 'w') as f:
+    with open(f'./list/pfb/{state}.lst', 'w') as f:
         f.write("\n".join(list_lines))
 
 
