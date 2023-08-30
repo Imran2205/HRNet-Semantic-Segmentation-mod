@@ -2,7 +2,7 @@ import os
 import glob
 from tqdm import tqdm
 
-dataset_root = '/Volumes/ssd_imran/carla_dataset/training/carla_semantic/'
+dataset_root = '/Users/imrankabir/Downloads/pfb'
 
 
 def create_list(state):
@@ -11,7 +11,7 @@ def create_list(state):
     images = glob.glob(
         os.path.join(
             dir_,
-            'images/*.png'
+            'images/*.jpg'
         )
     )
 
@@ -21,7 +21,7 @@ def create_list(state):
 
     for _img in images:
         list_lines.append(
-            f'{_img.replace(dataset_root, "")}\t{_img.replace("images", "labels").replace(dataset_root, "")}'
+            f'{_img.replace(dataset_root, "")}\t{_img.replace("images", "labels").replace("jpg", "png").replace(dataset_root, "")}'
         )
 
     with open(f'./list/pfb/{state}.lst', 'w') as f:

@@ -2,7 +2,7 @@ CUDNN:
   BENCHMARK: true
   DETERMINISTIC: false
   ENABLED: true
-GPUS: (0,1,2,3)
+GPUS: (0,1)
 OUTPUT_DIR: 'output'
 LOG_DIR: 'log'
 WORKERS: 4
@@ -10,14 +10,14 @@ PRINT_FREQ: 100
 
 DATASET:
   DATASET: pfb
-  ROOT: 'data/'
-  TEST_SET: 'list/cityscapes/val.lst'
-  TRAIN_SET: 'list/cityscapes/train.lst'
+  ROOT: '/kaggle/input/pfb-full-resized/pfb/pfb/'
+  TEST_SET: '/kaggle/input/pfb-full-resized/validation.lst'
+  TRAIN_SET: '/kaggle/input/pfb-full-resized/train.lst'
   NUM_CLASSES: 23
 MODEL:
   NAME: seg_hrnet
   ALIGN_CORNERS: False
-  PRETRAINED: 'pretrained_models/hrnetv2_w48_imagenet_pretrained.pth'
+  PRETRAINED: '/kaggle/input/image-net-hrnet-v2-pretrained/hrnetv2_w48_imagenet_pretrained.pth'
   EXTRA:
     FINAL_CONV_KERNEL: 1
     STAGE1:
@@ -74,13 +74,13 @@ LOSS:
   OHEMKEEP: 131072
 TRAIN:
   IMAGE_SIZE:
-  - 960
-  - 540
-  BASE_SIZE: 1920
-  BATCH_SIZE_PER_GPU: 4
+  - 640
+  - 360
+  BASE_SIZE: 640
+  BATCH_SIZE_PER_GPU: 8
   SHUFFLE: true
   BEGIN_EPOCH: 0
-  END_EPOCH: 484
+  END_EPOCH: 20
   RESUME: true
   OPTIMIZER: sgd
   LR: 0.01
@@ -94,9 +94,9 @@ TRAIN:
   SCALE_FACTOR: 16
 TEST:
   IMAGE_SIZE:
-  - 960
-  - 540
-  BASE_SIZE: 1920
-  BATCH_SIZE_PER_GPU: 4
+  - 640
+  - 360
+  BASE_SIZE: 640
+  BATCH_SIZE_PER_GPU: 8
   FLIP_TEST: false
   MULTI_SCALE: false
