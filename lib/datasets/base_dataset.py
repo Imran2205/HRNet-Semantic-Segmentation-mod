@@ -67,7 +67,7 @@ class BaseDataset(data.Dataset):
         image = self.pad_image(image, h, w, self.crop_size,
                                (0.0, 0.0, 0.0))
         print("########################")
-        print(label.shape)
+        print(label.shape, h, w, self.crop_size)
         label = self.pad_image(label, h, w, self.crop_size,
                                (self.ignore_label,))
 
