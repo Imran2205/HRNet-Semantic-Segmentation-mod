@@ -143,6 +143,8 @@ class PFB(BaseDataset):
         #                    cv2.IMREAD_COLOR)
         # image = cv2.imread(os.path.join(self.root, item["img"]),
         #                    cv2.IMREAD_COLOR)
+        if item["img"].startswith('/'):
+            item["img"] = item["img"][1:]
         image = Image.open(os.path.join(self.root, item["img"])).convert('RGB')
         image = np.array(image)
         size = image.shape
@@ -157,6 +159,9 @@ class PFB(BaseDataset):
         #                    cv2.IMREAD_GRAYSCALE)
         # labelel = cv2.imread(os.path.join(self.root, item["label"]),
         #                    cv2.IMREAD_GRAYSCALE)
+
+        if item["label"].startswith('/'):
+            item["label"] = item["label"][1:]
         label = Image.open(os.path.join(self.root, item["label"])).convert('RGB')
         label = np.array(label)
         label = self.convert_label(label)

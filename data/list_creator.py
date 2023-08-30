@@ -2,7 +2,7 @@ import os
 import glob
 from tqdm import tqdm
 
-dataset_root = '/Users/imrankabir/Downloads/pfb'
+dataset_root = '/Users/imrankabir/Downloads/pfb/'
 
 
 def create_list(state):
