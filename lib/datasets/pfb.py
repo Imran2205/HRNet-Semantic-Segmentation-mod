@@ -150,8 +150,8 @@ class PFB(BaseDataset):
         image = cv2.imread(os.path.join(self.root, item["img"]),
                            cv2.IMREAD_COLOR)
 
-        print('################')
-        print(image.shape)
+        # print('################')
+        # print(image.shape)
 
         size = image.shape
 
@@ -174,7 +174,7 @@ class PFB(BaseDataset):
         label = cv2.imread(os.path.join(self.root, item["label"]),
                            cv2.IMREAD_GRAYSCALE)
 
-        print(label.shape)
+        # print(label.shape)
 
         # print(np.unique(label))
         label = self.convert_label(label)
