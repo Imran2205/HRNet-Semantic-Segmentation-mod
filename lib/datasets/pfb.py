@@ -169,7 +169,7 @@ class PFB(BaseDataset):
 
         label = cv2.imread(os.path.join(self.root, item["label"]),
                            cv2.IMREAD_GRAYSCALE)
-        print(np.unique(label))
+        # print(np.unique(label))
         label = self.convert_label(label)
 
         image, label = self.gen_sample(image, label,
