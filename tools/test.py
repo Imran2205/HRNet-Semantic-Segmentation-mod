@@ -121,6 +121,7 @@ def main():
                                                            test_dataset, 
                                                            testloader, 
                                                            model,
+                                                           sv_dir=final_output_dir,
                                                            sv_pred=True)
     
         msg = 'MeanIU: {: 4.4f}, Pixel_Acc: {: 4.4f}, \
