@@ -109,7 +109,7 @@ class PFB(BaseDataset):
             for item in self.img_list:
                 image_path = item
                 name = os.path.splitext(os.path.basename(image_path[0]))[0]
-                print(name)
+                print(image_path[0])
                 files.append({
                     "img": image_path[0],
                     "name": name,
