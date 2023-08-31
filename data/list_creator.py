@@ -11,7 +11,7 @@ def create_list(state):
     images = glob.glob(
         os.path.join(
             dir_,
-            'images/*.jpg'
+            'images/*.png'
         )
     )
 
@@ -28,7 +28,8 @@ def create_list(state):
         f.write("\n".join(list_lines))
 
 
-folders = ['train', 'validation']
+# folders = ['train', 'validation', 'test']
+folders = ['test']
 
 for fol in folders:
     create_list(fol)
