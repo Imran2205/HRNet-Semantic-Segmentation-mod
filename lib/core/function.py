@@ -158,6 +158,7 @@ def testval(config, test_dataset, testloader, model,
     with torch.no_grad():
         for index, batch in enumerate(tqdm(testloader)):
             # image, label, _, name, *border_padding = batch
+            print(len(batch))
             image, label, _, name = batch
             size = label.size()
             pred = test_dataset.multi_scale_inference(
