@@ -100,4 +100,4 @@ TEST:
   BATCH_SIZE_PER_GPU: 8
   FLIP_TEST: false
   MULTI_SCALE: false
-  MODEL_FILE: '/kaggle/input/image-net-hrnet-v2-pretrained/hrnetv2_w48_imagenet_pretrained.pth'
+  MODEL_FILE: '/kaggle/input/pfb-vqa-hrnet-best/best.pth'
