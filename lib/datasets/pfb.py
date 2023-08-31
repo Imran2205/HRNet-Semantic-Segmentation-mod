@@ -157,7 +157,6 @@ class PFB(BaseDataset):
         size = image.shape
 
         if 'test' in self.list_path:
-            print("#########################################################")
             image = self.input_transform(image)
             image = image.transpose((2, 0, 1))
 

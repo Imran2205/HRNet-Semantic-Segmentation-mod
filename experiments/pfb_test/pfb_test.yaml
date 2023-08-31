@@ -11,7 +11,7 @@ PRINT_FREQ: 100
 DATASET:
   DATASET: pfb
   ROOT: '/kaggle/input/pfb-test-vqa/'
-  TEST_SET: '/kaggle/input/pfb-test-vqa/test/val_t.lst'
+  TEST_SET: '/kaggle/input/pfb-test-vqa/val_t/val_t.lst'
   TRAIN_SET: ''
   NUM_CLASSES: 23
 MODEL:
