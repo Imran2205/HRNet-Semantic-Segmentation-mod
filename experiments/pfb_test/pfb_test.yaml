@@ -10,8 +10,8 @@ PRINT_FREQ: 100
 
 DATASET:
   DATASET: pfb
-  ROOT: '/kaggle/input/pfv-val-t-vqa/'
-  TEST_SET: '/kaggle/input/pfv-val-t-vqa/val_t/val_t.lst'
+  ROOT: '/kaggle/input/vqa-images-all/vqa_images/'
+  TEST_SET: '/kaggle/input/vqa-images-all/vqa_images/validation.lst'
   TRAIN_SET: ''
   NUM_CLASSES: 23
 MODEL:
