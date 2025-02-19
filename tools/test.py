@@ -129,7 +129,7 @@ def main():
             pixel_acc, mean_acc)
         logging.info(msg)
         logging.info(IoU_array)
-    elif 'test' in config.DATASET.TEST_SET:
+    elif 'test' in config.DATASET.TEST_SET or '_list.txt' in config.DATASET.TEST_SET:
         test(config, 
              test_dataset, 
              testloader, 
