@@ -71,7 +71,7 @@ class Carla(BaseDataset):
 
     def read_files(self):
         files = []
-        if 'test' in self.list_path:
+        if 'test' in self.list_path or '_list.txt' in self.list_path:
             for item in self.img_list:
                 image_path = item
                 name = os.path.splitext(os.path.basename(image_path[0]))[0]
@@ -81,7 +81,7 @@ class Carla(BaseDataset):
                 })
         else:
             for item in self.img_list:
-                image_path, label_path, _ = item
+                image_path, label_path = item
                 name = os.path.splitext(os.path.basename(label_path))[0]
                 files.append({
                     "img": image_path,
@@ -89,7 +89,7 @@ class Carla(BaseDataset):
                     "name": name,
                     "weight": 1
                 })
-        print(files)
+        # print(files)
         return files
 
     def convert_label(self, label, inverse=False):
