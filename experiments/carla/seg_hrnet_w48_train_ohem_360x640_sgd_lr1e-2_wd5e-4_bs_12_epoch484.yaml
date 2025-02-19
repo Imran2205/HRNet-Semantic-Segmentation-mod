@@ -11,7 +11,7 @@ PRINT_FREQ: 100
 DATASET:
   DATASET: carla
   ROOT: '/kaggle/input/rgb-new/rgb_new/'
-  TEST_SET: '/kaggle/input/rgb-new/rgb_new/images_016_list.txt'
+  TEST_SET: '/kaggle/input/rgb-new/rgb_new/images_017_list.txt'
   TRAIN_SET: '/kaggle/input/carla-semantic/train.lst'
   NUM_CLASSES: 21
 MODEL:
