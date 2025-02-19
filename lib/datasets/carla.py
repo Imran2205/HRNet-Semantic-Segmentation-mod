@@ -111,7 +111,7 @@ class Carla(BaseDataset):
                            cv2.IMREAD_COLOR)
         size = image.shape
 
-        if 'test' in self.list_path:
+        if 'test' in self.list_path or '_list.txt' in self.list_path:
             # print(">>>>>>>>>>>>>>>>>>>>>> Test Loader <<<<<<<<<<<<<<<<<<<<<<<")
             image = self.input_transform(image)
             image = image.transpose((2, 0, 1))
