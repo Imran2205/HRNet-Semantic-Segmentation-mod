@@ -81,7 +81,7 @@ class Carla(BaseDataset):
                 })
         else:
             for item in self.img_list:
-                image_path, label_path = item
+                image_path, label_path, _ = item
                 name = os.path.splitext(os.path.basename(label_path))[0]
                 files.append({
                     "img": image_path,
