@@ -89,6 +89,7 @@ class Carla(BaseDataset):
                     "name": name,
                     "weight": 1
                 })
+        print(files)
         return files
 
     def convert_label(self, label, inverse=False):
